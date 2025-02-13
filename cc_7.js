@@ -119,3 +119,25 @@ function createBudgetTracker() {
 let budget = createBudgetTracker();
 console.log(budget(300)); // Expected output: "Current Balance: -$300"
 console.log(budget(200)); // Expected output: "Current Balance: -$500"
+
+//Task 8: Recursion in JavaScript
+
+function calculateGrowth(years, revenue) {
+    // Base case: Stop recursion when years reach 10
+    if (years >= 10) {
+        return revenue;
+    }
+
+    // Increase revenue by 5% for each year
+    return calculateGrowth(years + 1, revenue * 1.05);
+}
+
+// Wrapper function to format the output
+function projectRevenue(years, revenue) {
+    let projectedRevenue = calculateGrowth(years, revenue);
+    return `Projected Revenue: $${projectedRevenue.toFixed(2)}`;
+}
+
+// Test Cases
+console.log(projectRevenue(8, 1000));  // Expected output: "Projected Revenue: $1102.50"
+console.log(projectRevenue(5, 5000));  // Expected output: "Projected Revenue: $6381.41"
