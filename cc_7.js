@@ -1,5 +1,4 @@
 // Task 1: Function Declaration
-// Task 1: Function Declaration - Customer Invoice Calculation
 
 function calculateInvoice(subtotal, taxRate, discount) {
     // Calculate total using the formula
