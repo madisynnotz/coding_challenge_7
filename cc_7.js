@@ -1,8 +1,8 @@
 // Task 1: Function Declaration
 
 function calculateInvoice(subtotal, taxRate, discount) {
-    // Calculate total using the formula
-    let total = (subtotal + (subtotal * taxRate)) - discount;
+    // Calculated total using the formula
+    const total = (subtotal + (subtotal * taxRate)) - discount;
 
     // Format total to two decimal places and return the output
     return `Total Invoice: $${total.toFixed(2)}`;
@@ -14,9 +14,9 @@ console.log(calculateInvoice(500, 0.1, 20));  // Expected output: "Total Invoice
 
 //Task 2: Function Expression
 
-const calculateHourlyWage = function(salary, hoursPerWeek) {
+function calculateHourlyWage = function(salary, hoursPerWeek) {
     // Calculate hourly wage
-    let hourlyWage = salary / (hoursPerWeek * 52);
+    const hourlyWage = salary / (hoursPerWeek * 52);
 
     // Format hourly wage to two decimal places and return the output
     return `Hourly Wage: $${hourlyWage.toFixed(2)}`;
@@ -29,8 +29,17 @@ console.log(calculateHourlyWage(75000, 35));  // Expected output: "Hourly Wage: 
 // Task 3: Arrow Function
 
 const calculateLoyaltyDiscount = (amount, years) => {
-    // Determine discount rate based on years
-    let discountRate = years >= 5 ? 0.15 : years >= 3 ? 0.10 : 0.05;
+    // Determined discount rate based on years
+    let discountRate = 
+        if (years >= 5) {
+        discount rate = 0.15 ;
+    }
+    else if (years >= 3) {
+        discount rate= 0.10;
+    }
+    else if (years >= 3) {
+        discount rate 0.05;
+    }
 
     // Calculate discounted price
     let discountedPrice = amount - (amount * discountRate);
